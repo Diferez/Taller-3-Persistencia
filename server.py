@@ -15,4 +15,4 @@ def postOne():
     return(TipoSensor.create(body))
 
 
-app.run(port=5000, debug=True)
+app.run()
