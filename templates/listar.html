@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flask Client</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="container">
+
+    <h1 class="form-group text-center">Lista de Entidad</h1>
+    <div class="container jumbotron" style="width: 60%;">
+        <ul class="list-group">
+            {% for item in indicadores %}
+            <li class="list-group-item">
+                <span class="pull-right">
+                    Indicador
+                </span>
+                <b>Codigo</b> :{{item.codigo}}<br>
+                <b>Nombre</b> :{{item.nombre}}<br>
+                <b>Descripcion</b> :{{item.descripcion}}<br>
+                <b>Tipo Indicador</b> :{{item.tipoindicador}}<br>
+                <b>Prioridad</b> :{{item.prioridad}}<br>
+
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>
